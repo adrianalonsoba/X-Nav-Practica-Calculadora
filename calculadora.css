@@ -1,0 +1,16 @@
+body{
+	margin-left:2em;
+	margin-top:2em;
+}
+a{
+	background: yellow;
+	padding:.4em;
+	margin-right: 0.5em;
+	border: outset #1E90FF;
+	border-radius: 20px;
+}
+#display{
+	background: blue;
+	padding:.4em;
+	border: inset #696969;
+}
