@@ -9,6 +9,30 @@ a{
 	border: outset #1E90FF;
 	border-radius: 20px;
 }
+
+a:hover{
+	background: blue;
+	cursor: pointer;
+}
+
+#suma{
+	background: grey;
+}
+
+#resta{
+	background: green;
+}
+#multiplicacion{
+	background: purple;
+}
+#division{
+	background: orange;
+}
+
+#borrar{
+	background: red;
+}
+
 #display{
 	background: blue;
 	padding:.4em;

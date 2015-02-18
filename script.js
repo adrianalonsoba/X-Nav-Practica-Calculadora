@@ -9,49 +9,63 @@ function changer (id, newValue) {
 	element.innerHTML = newValue;
 }
 
+function catenate(id,value){
+	var element = document.getElementById(id);
+	element.innerHTML+=value;
+}
+
 jQuery(document).ready(function() {
 
 	$('#1').click(function(){
-		changer('display','1');
+		catenate('display','1');
 	});
 
 	$('#2').click(function(){
-		changer('display','2');
+		catenate('display','2');
 	});
 
 	$('#3').click(function(){
-		changer('display','3');
+		catenate('display','3');
 	});
 
 	$('#4').click(function(){
-		changer('display','4');
+		catenate('display','4');
 	});
 
 	$('#5').click(function(){
-		changer('display','5');
+		catenate('display','5');
 	});
 
 	$('#6').click(function(){
-		changer('display','6');
+		catenate('display','6');
 	});
 
 	$('#7').click(function(){
-		changer('display','7');
+		catenate('display','7');
 	});
 
 	$('#8').click(function(){
-		changer('display','8');
+		catenate('display','8');
 	});
 
 	$('#9').click(function(){
-		changer('display','9');
+		catenate('display','9');
 	});
+
+	$('#borrar').click(function(){
+		changer('display','');
+	});
+
+	$('#coma').click(function(){
+		catenate('display','.');
+	});
+
 
 	$('#suma').click(function(){
 		if(document.getElementById('display').innerHTML===''){
 			alert('Elige el primer operando');
 		}else{
-			op1=parseInt(document.getElementById('display').innerHTML);
+			op1=Number(document.getElementById('display').innerHTML);
 			changer('display','');
 			operacion='suma';
 		}
@@ -61,7 +75,7 @@ jQuery(document).ready(function() {
 		if(document.getElementById('display').innerHTML===''){
 			alert('Elige el primer operando');
 		}else{
-			op1=parseInt(document.getElementById('display').innerHTML);
+			op1=Number(document.getElementById('display').innerHTML);
 			changer('display','');
 			operacion='resta';
 		}
@@ -72,7 +86,7 @@ jQuery(document).ready(function() {
 		if(document.getElementById('display').innerHTML===''){
 			alert('Elige el primer operando');
 		}else{
-			op1=parseInt(document.getElementById('display').innerHTML);
+			op1=Number(document.getElementById('display').innerHTML);
 			changer('display','');
 			operacion='multiplicacion';
 		}
@@ -83,7 +97,7 @@ jQuery(document).ready(function() {
 		if(document.getElementById('display').innerHTML===''){
 			alert('Elige el primer operando');
 		}else{
-			op1=parseInt(document.getElementById('display').innerHTML);
+			op1=Number(document.getElementById('display').innerHTML);
 			changer('display','');
 			operacion='division';
 		}
@@ -95,7 +109,7 @@ jQuery(document).ready(function() {
 		if(document.getElementById('display').innerHTML===''){
 			alert('Elige el segundo operando');
 		}else{
-			op2=parseInt(document.getElementById('display').innerHTML);
+			op2=Number(document.getElementById('display').innerHTML);
 			switch(operacion) {
 			    case 'suma':
 			        result=op1+op2;
@@ -108,7 +122,7 @@ jQuery(document).ready(function() {
 			        break;
 			    case 'division':
 			    	result=op1/op2;
-			        break
+			        break;
 			} 
 			changer('display',result);
 		}
