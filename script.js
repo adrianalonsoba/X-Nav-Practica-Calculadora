@@ -14,7 +14,18 @@ function catenate(id,value){
 	element.innerHTML+=value;
 }
 
+function cleanForm(){
+	var form=document.getElementById('display2').reset();
+}
+
 jQuery(document).ready(function() {
+
+
+   formElement = document.getElementById('text');
+   writeElement = document.getElementById('display');
+   formElement.addEventListener('input', function(e) {
+      writeElement.innerHTML = this.value;
+   });
 
 	$('#1').click(function(){
 		catenate('display','1');
@@ -54,6 +65,7 @@ jQuery(document).ready(function() {
 
 	$('#borrar').click(function(){
 		changer('display','');
+		cleanForm();
 	});
 
 	$('#coma').click(function(){
@@ -67,6 +79,7 @@ jQuery(document).ready(function() {
 		}else{
 			op1=Number(document.getElementById('display').innerHTML);
 			changer('display','');
+			cleanForm();
 			operacion='suma';
 		}
 	});
@@ -77,6 +90,7 @@ jQuery(document).ready(function() {
 		}else{
 			op1=Number(document.getElementById('display').innerHTML);
 			changer('display','');
+			cleanForm();
 			operacion='resta';
 		}
 	});
@@ -88,6 +102,7 @@ jQuery(document).ready(function() {
 		}else{
 			op1=Number(document.getElementById('display').innerHTML);
 			changer('display','');
+			cleanForm();
 			operacion='multiplicacion';
 		}
 	});
@@ -99,6 +114,7 @@ jQuery(document).ready(function() {
 		}else{
 			op1=Number(document.getElementById('display').innerHTML);
 			changer('display','');
+			cleanForm();
 			operacion='division';
 		}
 	});
@@ -127,6 +143,5 @@ jQuery(document).ready(function() {
 			changer('display',result);
 		}
 	});
-
 });
 
