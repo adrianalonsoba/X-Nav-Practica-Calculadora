@@ -31,6 +31,10 @@ jQuery(document).ready(function() {
 		catenate('display','1');
 	});
 
+	$('#0').click(function(){
+		catenate('display','0');
+	});
+
 	$('#2').click(function(){
 		catenate('display','2');
 	});
